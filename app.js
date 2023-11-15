@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/api/test", (req, res) => {
-  res.semd("testing");
+  res.send("testing");
 });
 
 app.post("/api/checkout", async (req, res, next) => {
