@@ -20,7 +20,7 @@ app.post("/api/checkout", async (req, res, next) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: body.amount,
-      currency: "ngn",
+      currency: "usd",
       automatic_payment_methods: {
         enabled: true,
       },
