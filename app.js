@@ -11,6 +11,10 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
+app.get("/api/", (req, res) => {
+  res.semd("testing");
+});
+
 app.post("/api/checkout", async (req, res, next) => {
   const body = req.body;
   try {
